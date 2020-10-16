@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>思雨与琪琪的秘密小屋</title>
+
+
+
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+<!-- <embed src="http://p3qhnc0eg.bkt.clouddn.com/U%20are%20so%20beautiful.mp3" width="0" height="0" loop="-1" autostart="true"> </embed> -->
+<embed src="http://other.web.ri01.sycdn.kuwo.cn/resource/n3/19/68/2405391895.mp3" width="0" height="0" loop="-1" autostart="true"> </embed>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<p style="line-height:180%">
+	        	野有蔓草，零露漙兮。<br />
+	            有一美人，清扬婉如。</span><br />
+	            邂逅相遇，适我愿兮。<br /><br />
+        	</p>
+			<p style="line-height:180%">
+	            野有蔓草，零露瀼瀼。<br />
+	            有一美人，婉如清扬。<br />
+	            邂逅相遇，与子偕臧。<br /><br />
+	        </p>
+            </p>
+            
+	   			野有蔓草<br />
+				---《诗经》<br />
+	            赠给你的小诗 <br />
+	            ---琪<br />
+
+
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					We have been together for...
+					<div id="elapseClock"></div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<audio controls autoplay loop preload="metadata" style=" width:300px;">
+	<source src="http://music.163.com/song/media/outer/url?id=478507889.mp3" type="audio/mpeg" >
+	Your browser does not support the audio element.
+</audio><br />
+<a href="http://scriptgenerator.net/really-simple-embed-audio-player-script/" title="Generate here your HTML5 audio player" style="text-align: right;display: block">HTML5 Audio Player</a>   
+
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+
+together.setFullYear(2020, 6, 5);//1.23；3.29  
+together.setHours(00);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+
+</script>
+<div style="text-align:center;clear:both">
+<p>Made for Miss.Huang, made by Qiqi</p>
+<p>Our journey © 2020 - ∞. All Rights Reserved. Designed by Qiqi </p>
+</div>
+</body>
+</html>
